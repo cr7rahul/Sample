@@ -87,7 +87,7 @@ public class LearnModelController {
 	 * @return
 	 */
 	@GetMapping("models/{username}")
-	public LearnModel checkDuplicateModel(@PathVariable(value = "username") int modelUsername) {
+	public LearnModel checkDuplicateModel(@PathVariable(value = "id") int modelUsername) {
 		 
 		 Optional<LearnModel> optUser = learnModelRepository.findById(modelUsername); // returns java8 optional
 		    if (optUser.isPresent()) {
